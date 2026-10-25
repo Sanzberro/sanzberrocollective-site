@@ -1,0 +1,86 @@
+<main id="content" class="page">
+      <div class="wrap">
+        <p class="kicker">Contact</p>
+        <h1>Write us.</h1>
+        <p class="lede">Commissions, product questions, and company matters.</p>
+        <div class="contact-grid">
+          <dl class="facts">
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:Sanzberrocollective@gmail.com">Sanzberrocollective@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt>Seat</dt>
+              <dd>Visalia, California</dd>
+            </div>
+            <div>
+              <dt>Mail</dt>
+              <dd>
+                28 Geary St Suite 650 PMB 70394<br />
+                San Francisco, CA 94108
+                <p class="note">A mailbox. Not a place to visit.</p>
+              </dd>
+            </div>
+            <div>
+              <dt>Entity</dt>
+              <dd>Sanzberro Collective LLC</dd>
+            </div>
+          </dl>
+          <form id="note" action="mailto:Sanzberrocollective@gmail.com" method="post" enctype="text/plain">
+            <label>
+              Name
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Subject
+              <input name="subject" type="text" autocomplete="off" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">Open email</button>
+            <p id="form-status" class="form-status" role="status"></p>
+            <p class="note">Please don’t send legal papers through this form.</p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      (function () {
+        var form = document.getElementById("note");
+        if (!form) return;
+        var params = new URLSearchParams(location.search);
+        var preset = params.get("subject");
+        if (preset) {
+          var field = form.querySelector('[name="subject"]');
+          if (field && !field.value) field.value = preset;
+        }
+        var status = document.getElementById("form-status");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var data = new FormData(form);
+          var name = String(data.get("name") || "").trim();
+          var email = String(data.get("email") || "").trim();
+          var subject = String(data.get("subject") || "").trim();
+          var message = String(data.get("message") || "").trim();
+          if (!name || !email || !message) {
+            status.textContent = "Name, email, and a message are required.";
+            return;
+          }
+          var body = "Name: " + name + "\nEmail: " + email + "\n\n" + message;
+          var href =
+            "mailto:Sanzberrocollective@gmail.com?subject=" +
+            encodeURIComponent(subject || "Note for Sanzberro Collective") +
+            "&body=" +
+            encodeURIComponent(body);
+          window.location.href = href;
+          status.textContent =
+            "Your email app should open with the note. If it does not, write Sanzberrocollective@gmail.com.";
+        });
+      })();
+    </script>
