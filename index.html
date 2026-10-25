@@ -1,88 +1,137 @@
 <!doctype html>
-<html lang="en" class="antialiased">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sanzberro Collective</title>
-    <meta
-      name="description"
-      content="A house for work worth putting a name on. Sanzberro Collective LLC is a Visalia, California studio for design, making, and the ventures that follow."
-    />
-    <meta name="theme-color" content="#1c1916" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="Sanzberro Collective LLC is a family-owned company in Visalia, California. We sell what we make — directly, on marketplaces, and here." />
+    <meta name="theme-color" content="#1c1c1c" />
+    
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href="https://sanzberrocollective.com/" />
     <meta property="og:title" content="Sanzberro Collective" />
-    <meta
-      property="og:description"
-      content="A house for work worth putting a name on. Sanzberro Collective LLC is a Visalia, California studio for design, making, and the ventures that follow."
-    />
+    <meta property="og:description" content="Sanzberro Collective LLC is a family-owned company in Visalia, California. We sell what we make — directly, on marketplaces, and here." />
     <meta property="og:url" content="https://sanzberrocollective.com/" />
     <meta property="og:image" content="https://sanzberrocollective.com/og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Sanzberro Collective" />
-    <meta
-      name="twitter:description"
-      content="A house for work worth putting a name on. Sanzberro Collective LLC is a Visalia, California studio for design, making, and the ventures that follow."
-    />
+    <meta name="twitter:description" content="Sanzberro Collective LLC is a family-owned company in Visalia, California. We sell what we make — directly, on marketplaces, and here." />
     <meta name="twitter:image" content="https://sanzberrocollective.com/og.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/style.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
+        "@type": "Organization",
         "name": "Sanzberro Collective LLC",
         "url": "https://sanzberrocollective.com/",
+        "logo": "https://sanzberrocollective.com/images/logo-primary.jpg",
         "image": "https://sanzberrocollective.com/og.jpg",
         "email": "Sanzberrocollective@gmail.com",
+        "foundingDate": "2026-08-19",
         "founder": {
           "@type": "Person",
           "name": "John Sanzberro"
         },
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "28 Geary St Suite 650 PMB 70394",
-          "addressLocality": "San Francisco",
+          "addressLocality": "Visalia",
           "addressRegion": "CA",
-          "postalCode": "94108",
           "addressCountry": "US"
-        },
-        "areaServed": "Visalia, California"
+        }
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-BXShD_Eb.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-lNka67ib.css">
+    <link rel="preload" as="image" href="/images/lockup-primary.png" />
   </head>
   <body>
-    <form name="inquiry" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <input type="text" name="subject" />
-      <textarea name="message"></textarea>
-      <input name="bot-field" />
-    </form>
-    <noscript>
-      <main style="max-width: 40rem; margin: 4rem auto; padding: 0 1.25rem; font-family: Georgia, 'Iowan Old Style', serif; color: #1c1916; background: #f3efe8;">
-        <p style="letter-spacing: 0.22em; text-transform: uppercase; font-family: 'Avenir Next', sans-serif; font-size: 0.75rem;">
-          Visalia, California
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="site-header">
+      <a class="logo-link" href="/" aria-label="Sanzberro Collective, home">
+        <img class="wordmark" src="/images/wordmark-light.png" alt="Sanzberro" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/work" >Work</a>
+        <a href="/about" >About</a>
+        <a href="/contact" >Contact</a>
+      </nav>
+    </header>
+    <main id="content">
+      <section class="hero">
+        <h1 class="sr-only">Sanzberro Collective</h1>
+        <img
+          class="lockup"
+          src="/images/lockup-primary.png"
+          alt="Sanzberro wordmark and SC monogram"
+          width="770"
+          height="715"
+        />
+        <p class="kicker kicker-light">Visalia, California</p>
+        <p class="hero-line">Family-owned.<br />We sell what we make.</p>
+        <p class="hero-links">
+          <a href="/work">See the work</a>
+          <a href="/contact">Write us</a>
         </p>
-        <h1 style="font-weight: 500; font-size: 2.5rem; line-height: 1.15;">
-          A house for work worth putting a name on.
-        </h1>
-        <p>
-          Sanzberro Collective LLC is a studio for design, making, and the ventures that follow.
-        </p>
-        <p>
-          Write <a href="mailto:Sanzberrocollective@gmail.com">Sanzberrocollective@gmail.com</a>
-        </p>
-      </main>
-    </noscript>
-    <div id="root"></div>
+      </section>
+      <section class="band">
+        <div class="wrap">
+          <p class="kicker">In motion</p>
+          <div class="trio">
+            <a class="trio-item" href="/work#truthlens">
+              <span class="num">01</span>
+              <h2>TruthLens</h2>
+              <p>A digital product of the Collective. No public page yet.</p>
+            </a>
+            <a class="trio-item" href="/work#benny">
+              <span class="num">02</span>
+              <h2>Benny</h2>
+              <p>Outfits for this moment. A short run, not a standing line.</p>
+            </a>
+            <a class="trio-item" href="/work#direct">
+              <span class="num">03</span>
+              <h2>Direct</h2>
+              <p>Commissions and sales made person to person.</p>
+            </a>
+          </div>
+          <p class="quiet">
+            Some goods also go through Etsy and similar shops. Nothing from that
+            lane is being promoted here right now.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-wordmark" src="/images/wordmark-light.png" alt="" />
+          <p class="footer-name">Sanzberro Collective LLC</p>
+          <p class="footer-meta">Family-owned · Visalia, California</p>
+        </div>
+        <div class="footer-col">
+          <span>Pages</span>
+          <a href="/work">Work</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span>Write</span>
+          <a href="mailto:Sanzberrocollective@gmail.com">Sanzberrocollective@gmail.com</a>
+        </div>
+      </div>
+      <p class="legal">
+        <span>© 2026 Sanzberro Collective LLC</span>
+        <span>Est. 2026</span>
+      </p>
+    </footer>
   </body>
 </html>
